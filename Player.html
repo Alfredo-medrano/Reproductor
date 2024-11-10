@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reproductor Romántico</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-pink-500 to-red-500 text-white flex items-center justify-center min-h-screen">
+
+  <div class="player-container max-w-3xl w-full text-center p-8 bg-white bg-opacity-80 rounded-lg shadow-2xl animate-fadeIn">
+    <h1 class="text-5xl font-extrabold mb-4 text-pink-700" id="songTitle">🎶 Reproductor de Canción 🎶</h1>
+    <p class="text-lg mb-6 text-gray-700">Disfruta de tu música favorita y llena tu día de amor</p>
+
+    <!-- Imagen de portada de la canción -->
+    <img src="images/cover.jpg" alt="Portada de la canción" class="song-cover mx-auto mb-6 rounded-lg w-64 h-64 object-cover" id="songCover">
+
+    <audio id="audioPlayer" controls class="w-full mb-4 bg-gray-800 rounded-lg">
+      <source id="audioSource" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Contenedor para la dedicatoria de la canción -->
+    <div class="text-xl font-semibold text-gray-900 p-6 bg-gray-200 rounded-lg mb-6 h-64 overflow-auto" id="lyricsContainer">
+      <!-- La dedicatoria se cargará aquí -->
+    </div>
+
+    <div class="flex justify-center items-center mt-6 space-x-6">
+      <button class="play-pause-button bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-400 transition transform hover:scale-105 duration-300" id="playPauseButton">
+        Reproducir
+      </button>
+      <!-- Botón para volver al Home -->
+      <a href="home.html" class="back-home-button bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 transition transform hover:scale-105 duration-300">
+        Volver a la Lista de Canciones
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
